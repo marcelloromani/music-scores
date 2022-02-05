@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  lilypond:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.3
+
+      - name: Install lilypond
+        run: apt update && apt install -y lilypond
+
+      - name: Compile sheets
+        run: |
+          for doc in *.ly ; do
+            lilypond "${doc}"
+          done
