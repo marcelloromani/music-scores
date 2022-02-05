@@ -21,4 +21,4 @@ jobs:
         with:
           context: lilypond
           push: true
-          tags: lilypond:latest
+          tags: marcelloromani1975/lilypond:latest
