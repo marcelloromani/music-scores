@@ -1,3 +1,5 @@
+name: Compile sheets
+
 on:
   workflow_dispatch:
 
