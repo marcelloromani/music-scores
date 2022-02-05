@@ -1,0 +1,15 @@
+name: Create Lilypond Docker Image
+
+on:
+  workflow_dispatch:
+
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+
+     - name: Build and push
+       uses: docker/build-push-action@v2
+       with:
+         context: lilypond
+         push: false
